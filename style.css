@@ -1,0 +1,103 @@
+/*kommentaar*/
+h1{
+    font-variant: small-caps;
+    font-size: xx-large;
+    color: #ffffff; /*teksti värv*/
+    background: transparent; /*tausta värv*/
+}
+header{
+    padding: 5%;
+    background-color: #2a574a;
+    border-left: 3px solid #93dfc7;
+    border-bottom: 3px solid #93dfc7;
+    border-radius: 0 0 0 60px;
+    background-image: url("Misty.png");
+    background-repeat: no-repeat ;
+    background-position: right;
+}
+footer{
+    padding: 5%;
+    background-color: #2a574a;
+    border-left: 3px solid #93dfc7;
+    border-top: 3px solid #93dfc7;
+    border-radius: 60px 0 0 0;
+}
+section#osa1{
+    padding: 5%;
+    border: 1px solid #8c4040; /*kasuta nt: dotted, dashed, double, outline, groove*/
+    margin: 20px;/*kui ääres tekst kastiga asub*/
+    width: 25%;
+    /*kirjuta iga section(osa3, osa4, osa5) oma kujundusega mis kasutab erinevaid ääriseid värvi,
+     raam võiks olla ainult ühelt poolt*/
+}
+section#osa2{
+    padding: 5%;
+    border: 1px solid #b63939;
+    margin: 20px; /*kui ääres tekst kastiga asub*/
+    width: 15%;
+}
+
+section#osa3{
+    padding: 5%;
+    outline: #79408c;
+    outline-style: dashed;
+    margin: 50px; /*kui ääres tekst kastiga asub*/
+    width: 30%;
+    background-color: #e0ddff;
+}
+
+section#osa4{
+    padding: 5%;
+    outline-style: double;
+    outline-color: yellowgreen;
+    outline-width: thick;
+    margin: 50px; /*kui ääres tekst kastiga asub*/
+    text-decoration-color: #79408c;
+    background-color: #f1f1b8;
+
+}
+
+section#osa5{
+    padding: 5%;
+    border: 1px solid #3b7adf;
+    margin: 50px; /*kui ääres tekst kastiga asub*/
+    width: 40%;
+    outline-style: outset;
+    background-color: #d9e5f8;
+}
+
+img{
+    width: 100%;
+    border-radius: 50%;
+    border: 5px solid #2a574a;
+}
+/*navigeerimis menüü*/
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;background-color: #2a574a;
+}
+nav ul li{
+    float: left;
+}
+nav ul li a{
+    display: block;
+    color: #000000;
+    text-decoration: none;/*link on allajoonitud*/
+    text-align: center;/*teksti joonitamine keskel*/
+    padding: 10px;
+    border-left: 3px solid #93dfc7;
+    border-radius: 20%;
+}
+nav{
+    padding: 5%;
+    margin: 20px;
+}
+nav ul li a:hover{
+    background-color: #92dfc7;
+}
+
+
+
+
+
