@@ -66,17 +66,12 @@ section#osa5{
     background-color: #d9e5f8;
 }
 
-img{
+img#erapilt{
     width: 100%;
     border-radius: 50%;
-    border: 5px solid #2a574a;
+    border: 5px #2a574a;
 }
-/*navigeerimis menüü*/
-nav ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;background-color: #2a574a;
-}
+
 nav ul li{
     float: left;
 }
@@ -89,15 +84,61 @@ nav ul li a{
     border-left: 3px solid #93dfc7;
     border-radius: 20%;
 }
-nav{
+nav ul{
     padding: 5%;
     margin: 20px;
+    list-style: none;
 }
 nav ul li a:hover{
     background-color: #92dfc7;
 }
 
+/*Meediagalerii lehtvvvvv*/
 
-
-
-
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+/* Iga section */
+section {
+    padding: 20px;
+    border: 1px solid #8c4040;
+}
+/* Pildigalerii ise on samuti grid */
+#pildigalerii {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+/* see teeb niimoodi et pildid lähevad kolme kaupa */
+#pildigalerii .pildid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+/* Pildid täidavad oma ruudu */
+#pildigalerii img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* Iframe'id ei lähe liiga suureks */
+section iframe {
+    max-width: 100%;
+}
+/* Video */
+#video {
+    display: grid;
+    gap: 20px;
+}
+/* Muusika */
+#muusika {
+    display: grid;
+    gap: 20px;
+}
+/* Kaart */
+#kaart {
+    display: grid;
+    gap: 20px;
+}
