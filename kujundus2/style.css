@@ -1,0 +1,1212 @@
+/* =========================================================
+   MODERN BLUE VERTICAL WEBSITE
+   PÕHIVÄRV: #1f7bff
+   ========================================================= */
+
+
+/* =========================================================
+   VÄRVID
+   ========================================================= */
+
+:root {
+    --blue: #1f7bff;
+    --blue-dark: #0d4fc7;
+    --blue-light: #eaf3ff;
+
+    --navy: #081a33;
+    --navy-2: #102b4d;
+
+    --purple: #7c5cff;
+    --orange: #ff9f43;
+
+    --white: #ffffff;
+
+    --gray: #64748b;
+    --gray-light: #f5f8fc;
+
+    --border: #dbe7f5;
+
+    --shadow:
+            0 20px 60px rgba(8, 26, 51, 0.10);
+}
+
+
+/* =========================================================
+   ÜLDINE KUJUNDUS
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family:
+            "Segoe UI",
+            Arial,
+            sans-serif;
+
+    color: var(--navy);
+
+    background: var(--gray-light);
+
+    line-height: 1.7;
+
+    overflow-x: hidden;
+}
+
+
+/* Teksti märgistamine */
+
+::selection {
+    background: var(--blue);
+    color: white;
+}
+
+
+/* =========================================================
+   VERTIKAALNE NAVIGATSIOON
+   ========================================================= */
+
+nav {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 240px;
+    height: 100vh;
+
+    padding: 40px 20px;
+
+    background: var(--navy);
+
+    display: flex;
+    align-items: center;
+
+    z-index: 1000;
+
+    box-shadow:
+            10px 0 40px rgba(8, 26, 51, 0.12);
+}
+
+
+/* Logo */
+
+nav::before {
+    content: "Minu veebisait";
+
+    position: absolute;
+
+    top: 35px;
+    left: 35px;
+
+    color: white;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+
+/* Menüü */
+
+nav ul {
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+nav ul li {
+    width: 100%;
+}
+
+nav ul li a {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 15px 18px;
+
+    color: #aebed3;
+
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+/* Väike täpp */
+
+nav ul li a::before {
+    content: "";
+
+    width: 7px;
+    height: 7px;
+
+    margin-right: 12px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #49617d;
+
+    transition: 0.3s ease;
+}
+
+
+/* Hover */
+
+nav ul li a:hover {
+    color: white;
+
+    background:
+            rgba(31, 123, 255, 0.14);
+
+    transform:
+            translateX(5px);
+}
+
+nav ul li a:hover::before {
+    background: var(--blue);
+
+    box-shadow:
+            0 0 12px var(--blue);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+    position: relative;
+
+    min-height: 250px;
+
+    margin-left: 240px;
+
+    padding: 55px 8%;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    color: white;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #07182e 0%,
+                    #0d2e58 55%,
+                    #123f78 100%
+            );
+
+    border-radius:
+            0 0 45px 45px;
+
+    box-shadow:
+            0 15px 40px
+            rgba(8, 26, 51, 0.16);
+}
+
+
+/* Sinine dekoratiivne ring */
+
+header::before {
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    right: -100px;
+    top: -140px;
+
+    border-radius: 50%;
+
+    background:
+            radial-gradient(
+                    circle,
+                    rgba(31, 123, 255, 0.75),
+                    rgba(31, 123, 255, 0)
+            );
+
+    filter: blur(8px);
+}
+
+
+/* Lilla dekoratiivne ring */
+
+header::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: 25%;
+    bottom: -100px;
+
+    border-radius: 50%;
+
+    background:
+            rgba(124, 92, 255, 0.35);
+
+    filter: blur(35px);
+}
+
+
+/* Headeri sisu */
+
+header > * {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   H1
+   ========================================================= */
+
+h1 {
+    max-width: 800px;
+
+    margin: 0;
+
+    font-size:
+            clamp(2.2rem, 5vw, 4.5rem);
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+
+    font-weight: 800;
+
+    color: white;
+}
+
+h1 span {
+    color: var(--blue);
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+main {
+    margin-left: 240px;
+
+    padding:
+            55px 7%;
+}
+
+
+/* =========================================================
+   KÕIK SISUKASTID
+   ÜHTLANE LAIUS + PADDING + VAHED
+   ========================================================= */
+
+section,
+section#osa1,
+section#osa2,
+section#osa3,
+section#osa4,
+section#osa5 {
+    position: relative;
+
+    width: 100%;
+    max-width: 1100px;
+
+    margin:
+            0 auto 60px;
+
+    padding: 55px;
+
+    border-radius: 30px;
+
+    border-left:
+            7px solid var(--blue);
+
+    box-shadow:
+            var(--shadow);
+
+    overflow: hidden;
+
+    transition:
+            transform 0.4s ease,
+            box-shadow 0.4s ease;
+}
+
+
+/* Kõik otsesed elemendid jäävad numbri/deko alla */
+
+section > * {
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* Hover */
+
+section:hover {
+    transform:
+            translateY(-7px);
+
+    box-shadow:
+            0 30px 80px
+            rgba(8, 26, 51, 0.14);
+}
+
+
+/* =========================================================
+   KASTIDE NUMBRID
+   ========================================================= */
+
+section::before {
+    position: absolute;
+
+    top: 20px;
+    right: 30px;
+
+    font-size: 80px;
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    color:
+            rgba(31, 123, 255, 0.06);
+}
+
+
+/* =========================================================
+   OSA 1
+   ========================================================= */
+
+section#osa1 {
+    background:
+            linear-gradient(
+                    135deg,
+                    #ffffff 65%,
+                    #edf5ff
+            );
+
+    border-left-color:
+            var(--blue);
+}
+
+section#osa1::before {
+    content: "01";
+
+    color:
+            rgba(31, 123, 255, 0.06);
+}
+
+
+/* =========================================================
+   OSA 2
+   ========================================================= */
+
+section#osa2 {
+    background:
+            linear-gradient(
+                    135deg,
+                    #ffffff 60%,
+                    #f3efff
+            );
+
+    border-left-color:
+            var(--purple);
+}
+
+section#osa2::before {
+    content: "02";
+
+    color:
+            rgba(124, 92, 255, 0.07);
+}
+
+
+/* =========================================================
+   OSA 3
+   ========================================================= */
+
+section#osa3 {
+    color: white;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #07182e,
+                    #123d70
+            );
+
+    border-left-color:
+            var(--blue);
+
+    box-shadow:
+            0 30px 80px
+            rgba(8, 26, 51, 0.25);
+}
+
+section#osa3 h2,
+section#osa3 h3 {
+    color: white;
+}
+
+section#osa3 p {
+    color: #c6d7ea;
+}
+
+section#osa3::before {
+    content: "03";
+
+    color:
+            rgba(255, 255, 255, 0.05);
+}
+
+
+/* Osa 3 alumine värviline joon */
+
+section#osa3::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 45%;
+    height: 5px;
+
+    background:
+            linear-gradient(
+                    90deg,
+                    var(--blue),
+                    var(--purple)
+            );
+}
+
+
+/* =========================================================
+   OSA 4
+   ========================================================= */
+
+section#osa4 {
+    background:
+            linear-gradient(
+                    135deg,
+                    #fffaf2,
+                    #ffffff
+            );
+
+    border-left-color:
+            var(--orange);
+
+    box-shadow:
+            0 20px 60px
+            rgba(255, 159, 67, 0.10);
+}
+
+section#osa4::before {
+    content: "04";
+
+    color:
+            rgba(255, 159, 67, 0.08);
+}
+
+
+/* =========================================================
+   OSA 5 – KASULIKUD LINGID
+   ========================================================= */
+
+section#osa5 {
+    background:
+            linear-gradient(
+                    135deg,
+                    #eaf3ff,
+                    #ffffff
+            );
+
+    border-left-color:
+            var(--blue);
+}
+
+section#osa5::before {
+    content: "05";
+
+    color:
+            rgba(31, 123, 255, 0.06);
+}
+
+
+/* =========================================================
+   KASULIKUD LINGID – LINGIKASTID
+   ========================================================= */
+
+section#osa5 a {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+
+    margin:
+            6px 8px 6px 0;
+
+    padding:
+            10px 17px;
+
+    border-radius: 12px;
+
+    background:
+            var(--blue-light);
+
+    color:
+            var(--blue);
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    border:
+            1px solid rgba(31, 123, 255, 0.10);
+
+    box-shadow:
+            0 5px 15px
+            rgba(31, 123, 255, 0.08);
+
+    transition:
+            0.25s ease;
+}
+
+section#osa5 a:hover {
+    color: white;
+
+    background:
+            var(--blue);
+
+    transform:
+            translateY(-3px);
+
+    box-shadow:
+            0 10px 25px
+            rgba(31, 123, 255, 0.20);
+}
+
+
+/* =========================================================
+   PEALKIRJAD
+   ========================================================= */
+
+section h2 {
+    position: relative;
+
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font-size: 2.2rem;
+
+    color: var(--navy);
+
+    letter-spacing: -1px;
+}
+
+section h3 {
+    color: var(--blue);
+
+    font-size: 1.3rem;
+}
+
+
+/* Osa 3 pealkirjad */
+
+section#osa3 h2,
+section#osa3 h3 {
+    color: white;
+}
+
+
+/* H2 alumine joon */
+
+section h2::after {
+    content: "";
+
+    display: block;
+
+    width: 45px;
+    height: 4px;
+
+    margin-top: 12px;
+
+    border-radius: 10px;
+
+    background:
+            var(--blue);
+}
+
+
+/* =========================================================
+   TEKST
+   ========================================================= */
+
+p {
+    margin-top: 0;
+
+    color: var(--gray);
+
+    font-size: 1.05rem;
+}
+
+
+/* =========================================================
+   LINGID
+   ========================================================= */
+
+a {
+    color: var(--blue);
+
+    font-weight: 600;
+
+    transition:
+            color 0.2s ease;
+}
+
+a:hover {
+    color: var(--blue-dark);
+}
+
+
+/* =========================================================
+   PILT
+   ========================================================= */
+
+img#erapilt {
+    display: block;
+
+    width: 260px;
+    height: 260px;
+
+    margin:
+            20px auto;
+
+    object-fit: cover;
+
+    border-radius: 30px;
+
+    border:
+            8px solid white;
+
+    box-shadow:
+            0 0 0 5px var(--blue),
+            0 20px 50px
+            rgba(31, 123, 255, 0.25);
+
+    transform:
+            rotate(-3deg);
+
+    transition:
+            0.4s ease;
+}
+
+
+/* Pildi hover */
+
+img#erapilt:hover {
+    transform:
+            rotate(0deg)
+            scale(1.05);
+
+    box-shadow:
+            0 0 0 7px var(--purple),
+            0 25px 60px
+            rgba(124, 92, 255, 0.25);
+}
+
+
+/* =========================================================
+   NUPUD
+   ========================================================= */
+
+button {
+    padding:
+            14px 28px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background:
+            var(--blue);
+
+    color: white;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+            0 10px 25px
+            rgba(31, 123, 255, 0.25);
+
+    transition:
+            0.3s ease;
+}
+
+button:hover {
+    background:
+            var(--blue-dark);
+
+    transform:
+            translateY(-3px);
+
+    box-shadow:
+            0 15px 35px
+            rgba(31, 123, 255, 0.35);
+}
+
+
+/* =========================================================
+   MEEDIAGALERII
+   ========================================================= */
+
+.meediagalerii {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.meediagalerii img {
+    width: 100%;
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 22px;
+
+    box-shadow:
+            0 10px 30px
+            rgba(8, 26, 51, 0.12);
+
+    transition:
+            0.4s ease;
+}
+
+.meediagalerii img:hover {
+    transform:
+            translateY(-8px)
+            scale(1.02);
+
+    box-shadow:
+            0 20px 45px
+            rgba(31, 123, 255, 0.20);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    position: relative;
+
+    margin-left: 240px;
+
+    padding:
+            80px 8%;
+
+    color: white;
+
+    overflow: hidden;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #061426,
+                    #0d2d53
+            );
+
+    border-radius:
+            60px 0 0 0;
+
+    box-shadow:
+            0 -15px 40px
+            rgba(8, 26, 51, 0.12);
+}
+
+
+/* Footer sinine ring */
+
+footer::before {
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    right: -150px;
+    top: -200px;
+
+    border-radius: 50%;
+
+    background:
+            rgba(31, 123, 255, 0.3);
+
+    filter: blur(50px);
+}
+
+
+/* Footer tekst */
+
+footer p {
+    position: relative;
+
+    color: #aebed3;
+}
+
+footer h2,
+footer h3 {
+    position: relative;
+
+    color: white;
+}
+
+
+/* =========================================================
+   ACCENT KLASSID
+   ========================================================= */
+
+.accent-blue {
+    color: var(--blue);
+}
+
+.accent-purple {
+    color: var(--purple);
+}
+
+.accent-orange {
+    color: var(--orange);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    /* NAV */
+
+    nav {
+        position: relative;
+
+        width: 100%;
+        height: auto;
+
+        padding: 20px;
+
+        display: block;
+    }
+
+    nav::before {
+        position: relative;
+
+        top: auto;
+        left: auto;
+
+        display: block;
+
+        margin:
+                0 0 20px;
+
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: row;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        width: auto;
+    }
+
+    nav ul li a {
+        padding:
+                10px 14px;
+    }
+
+
+    /* HEADER */
+
+    header {
+        margin-left: 0;
+
+        min-height: 210px;
+
+        padding:
+                45px 7%;
+
+        border-radius:
+                0 0 35px 35px;
+    }
+
+
+    /* MAIN */
+
+    main {
+        margin-left: 0;
+
+        padding:
+                45px 5%;
+    }
+
+
+    /* KÕIK KASTID ÜHTEMOODI */
+
+    section,
+    section#osa1,
+    section#osa2,
+    section#osa3,
+    section#osa4,
+    section#osa5 {
+        width: 100%;
+        max-width: 1100px;
+
+        margin:
+                0 auto 50px;
+
+        padding:
+                35px 30px;
+
+        border-radius:
+                26px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        margin-left: 0;
+
+        padding:
+                60px 7%;
+
+        border-radius:
+                45px 0 0 0;
+    }
+
+
+    /* GALLERY */
+
+    .meediagalerii {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   VÄIKE TELEFON
+   ========================================================= */
+
+@media (max-width: 550px) {
+
+    /* NAV */
+
+    nav ul {
+        flex-direction: column;
+
+        gap: 3px;
+    }
+
+    nav ul li,
+    nav ul li a {
+        width: 100%;
+
+        text-align: center;
+
+        justify-content: center;
+    }
+
+
+    /* HEADER */
+
+    header {
+        min-height: 170px;
+
+        padding:
+                35px 6%;
+
+        border-radius:
+                0 0 25px 25px;
+    }
+
+
+    /* H1 */
+
+    h1 {
+        font-size: 2.5rem;
+
+        letter-spacing: -1px;
+    }
+
+
+    /* MAIN */
+
+    main {
+        padding:
+                35px 4%;
+    }
+
+
+    /* KÕIK KASTID */
+
+    section,
+    section#osa1,
+    section#osa2,
+    section#osa3,
+    section#osa4,
+    section#osa5 {
+        width: 100%;
+        max-width: none;
+
+        margin:
+                0 auto 35px;
+
+        padding:
+                30px 22px;
+
+        border-radius:
+                22px;
+    }
+
+
+    /* NUMBRID */
+
+    section::before {
+        font-size:
+                60px;
+
+        top:
+                18px;
+
+        right:
+                20px;
+    }
+
+
+    /* PEALKIRJAD */
+
+    section h2 {
+        font-size:
+                1.8rem;
+    }
+
+
+    /* PILT */
+
+    img#erapilt {
+        width: 200px;
+        height: 200px;
+    }
+
+
+    /* KASULIKUD LINGID */
+
+    section#osa5 a {
+        display: flex;
+
+        width: 100%;
+
+        margin:
+                8px 0;
+
+        text-align: center;
+    }
+
+
+    /* GALLERY */
+
+    .meediagalerii {
+        grid-template-columns:
+            1fr;
+    }
+
+    .meediagalerii img {
+        height:
+                250px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding:
+                50px 6%;
+    }
+}
+
+
+/* =========================================================
+   VÄIKE KÕRGUS – väiksemad laptopid
+   ========================================================= */
+
+@media (max-height: 700px) and (min-width: 901px) {
+
+    header {
+        min-height: 200px;
+
+        padding:
+                40px 8%;
+    }
+
+    h1 {
+        font-size:
+                3rem;
+    }
+}
