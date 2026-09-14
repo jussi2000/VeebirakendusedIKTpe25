@@ -3,8 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <title>Tabelid HTML-keeles</title>
+    <link rel="stylesheet" href="tabeliStyle.css">
 </head>
 <body>
 <h1>Tabelid HTML-keeles</h1>
+<h2>Kõige lihtsam tabel</h2>
+    <!---Tabel------->
+<table id="sinine">
+    <caption>Tabel 1</caption>
+    <!-- 1.rida------>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+    </tr>
+    <!-- 2.rida------>
+    <tr>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <!--------------->
+</table>
+
+<h2>Natuke keerulisem tabel</h2>
+    <!---Tabel------->
+<table id="punane">
+    <caption>Tabel 2</caption>
+    <!-- 1.rida------>
+    <tr>
+        <td colspan="2">1</td>
+    </tr>
+
+    <!-- 2.rida------>
+    <tr>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <!--------------->
+</table>
+
+<h2>Veel üks natuke keerulisem tabel</h2>
+<!---Tabel------->
+<table id="roheline">
+    <caption>Tabel 3</caption>
+    <!-- 1.rida------>
+    <tr>
+        <td rowspan="2">1</td><!--vertikaalne-->
+        <td>2</td>
+    </tr>
+    <!-- 2.rida------>
+    <tr>
+        <td>4</td>
+    </tr>
+    <!--------------->
+</table>
 </body>
 </html>

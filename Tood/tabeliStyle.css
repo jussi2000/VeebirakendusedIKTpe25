@@ -1,0 +1,31 @@
+table#sinine{
+    border: 1px solid blue;
+    width: 30%;
+    height: 200px;
+}
+table#sinine td{
+    border: 1px solid blue;
+    text-align: center;
+}
+table#punane{
+    border: 1px solid red;
+    width: 40%;
+    height: 200px;
+    border-collapse: collapse;
+}
+table#punane td{
+    border: 1px solid red;
+    text-align: center;
+<br>
+}
+table#roheline{
+    border: 1px solid green;
+    width: 20%;
+    height: 100px;
+    border-collapse: collapse;
+}
+table#roheline td{
+    border: 1px solid green;
+    text-align: center;
+<br>
+}
