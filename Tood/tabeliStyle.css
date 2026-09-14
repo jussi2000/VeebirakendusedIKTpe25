@@ -45,8 +45,8 @@ table#sinine tr:nth-child(2) {
 /*Lilla tabeli outline/border------------------*/
 table#lilla{
     border: 1px solid purple;
-    width: 50%;
-    height: 300px;
+    width: 35%;
+    height: 250px;
     border-collapse: collapse;
 }
 table#lilla td{
@@ -89,4 +89,16 @@ table#lilla tr:nth-child(4) td:nth-child(1){
 /*4. rida, 2. lahter*/
 table#lilla tr:nth-child(4) td:nth-child(2){
     background-color: #ff3078;
+}
+/*HINDELINE TÖÖ*/
+table#iseseisev{
+    border: 1px solid purple;
+    width: 30%;
+    height: 250px;
+    border-collapse: collapse;
+}
+table#iseseisev td{
+    border: 1px solid purple;
+    text-align: center;
+<br>
 }

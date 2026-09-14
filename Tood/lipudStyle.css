@@ -1,12 +1,19 @@
+h1#lipud{
+
+}
+
 #eesti{
     width: 330px;
     height: 210px;
     border: 1px solid grey;
     border-spacing: 0;
     /*border-collapse: collapse;*/
+    position: absolute;
+    top: 60px;
+    left: 50%;
 }
 #eesti tr:nth-child(1){
-    background-color: blue;
+    background-color: #2945bc;
 }
 #eesti tr:nth-child(2){
     background-color: black;
@@ -14,3 +21,79 @@
 #eesti tr:nth-child(3){
      background-color: white;
  }
+
+#rootsi{
+    width: 330px;
+    height: 210px;
+    border: 1px solid grey;
+    border-spacing: 0;
+    /*border-collapse: collapse;*/
+    position: absolute;
+    top: 310px;
+    left: 50%;
+}
+#rootsi tr:nth-child(2){/*2.rida*/
+    background-color: #ecc70f;
+    height: 50px;
+}
+#rootsi tr:nth-child(1) td:nth-child(1),
+#rootsi tr:nth-child(3) td:nth-child(1){
+    background-color: #2d5195;
+    width: 100px;
+}
+#rootsi tr:nth-child(1) td:nth-child(3),
+#rootsi tr:nth-child(3) td:nth-child(3){
+    background-color: #2d5195;
+    width: 175px;
+}
+#rootsi tr:nth-child(1) td:nth-child(2),
+#rootsi tr:nth-child(3) td:nth-child(2){
+    background-color: #ECC70FFF;
+}
+#itaalia{
+    width: 330px;
+    height: 210px;
+    border: 1px solid grey;
+    border-spacing: 0;
+    /*border-collapse: collapse;*/
+    position: absolute;
+    top: 565px;
+    left: 50%;
+}
+#itaalia tr:nth-child(1){
+    background-color: #00a340;
+}
+#itaalia tr:nth-child(2){
+    background-color: #ffffff;
+}
+#itaalia tr:nth-child(3){
+    background-color: #bc1717;
+}
+#sveits{
+    width: 300px;
+    height: 250px;
+    border: 1px solid grey;
+    border-spacing: 0;
+    /*border-collapse: collapse;*/
+    position: absolute;
+    top: 820px;
+    left: 50%;
+}
+#sveits tr:nth-child(1){
+    background-color: #e60000;
+}
+#sveits tr:nth-child(5){
+    background-color: #e60000;
+}
+#sveits tr:nth-child(2) td:nth-child(1),
+#sveits tr:nth-child(2) td:nth-child(4),
+#sveits tr:nth-child(2) td:nth-child(5),
+#sveits tr:nth-child(3) td:nth-child(5),
+#sveits tr:nth-child(3) td:nth-child(1),
+#sveits tr:nth-child(4) td:nth-child(1),
+#sveits tr:nth-child(4) td:nth-child(5),
+#sveits tr:nth-child(4) td:nth-child(2),
+#sveits tr:nth-child(4) td:nth-child(4),
+#sveits tr:nth-child(2) td:nth-child(2){
+    background-color: #e60000;
+}
