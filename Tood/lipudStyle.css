@@ -1,0 +1,16 @@
+#eesti{
+    width: 330px;
+    height: 210px;
+    border: 1px solid grey;
+    border-spacing: 0;
+    /*border-collapse: collapse;*/
+}
+#eesti tr:nth-child(1){
+    background-color: blue;
+}
+#eesti tr:nth-child(2){
+    background-color: black;
+}
+#eesti tr:nth-child(3){
+     background-color: white;
+ }

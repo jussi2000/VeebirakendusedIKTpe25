@@ -29,3 +29,64 @@ table#roheline td{
     text-align: center;
 <br>
 }
+/*pseudoelementide kasutamine*/
+/*1. rida, 1. lahter*/
+table#sinine tr:nth-child(1) td:nth-child(1){
+    background-color: red;
+}
+/*1. rida, 2. lahter*/
+table#sinine tr:nth-child(1) td:nth-child(2){
+    background-color: yellow;
+}
+/*2. rida*/
+table#sinine tr:nth-child(2) {
+    background-color: gray;
+}
+/*Lilla tabeli outline/border------------------*/
+table#lilla{
+    border: 1px solid purple;
+    width: 50%;
+    height: 300px;
+    border-collapse: collapse;
+}
+table#lilla td{
+    border: 1px solid purple;
+    text-align: center;
+<br>
+}
+/*Lilla tabeli värvimine----------------------*/
+table#lilla tr:nth-child(1) td:nth-child(1){
+    background-color: red;
+}
+/*1. rida, 2. lahter*/
+table#lilla tr:nth-child(1) td:nth-child(2){
+    background-color: #7bff00;
+}
+/*2. rida, 1. lahter*/
+table#lilla tr:nth-child(2) td:nth-child(1){
+    background-color: #00a6ff;
+}
+/*2. rida, 2. lahter*/
+table#lilla tr:nth-child(2) td:nth-child(2){
+    background-color: #ac3fff;
+}
+/*3. rida, 1. lahter*/
+table#lilla tr:nth-child(3) td:nth-child(1){
+    background-color: #ff3fdf;
+}
+/*3. rida, 2. lahter*/
+table#lilla tr:nth-child(3) td:nth-child(2){
+    background-color: #ff8a30;
+}
+/*3. rida, 3. lahter*/
+table#lilla tr:nth-child(3) td:nth-child(3){
+    background-color: #6430ff;
+}
+/*4. rida, 1. lahter*/
+table#lilla tr:nth-child(4) td:nth-child(1){
+    background-color: #30ffe0;
+}
+/*4. rida, 2. lahter*/
+table#lilla tr:nth-child(4) td:nth-child(2){
+    background-color: #ff3078;
+}

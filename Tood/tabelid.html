@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Tabelid HTML-keeles</title>
+    <!--ühendused - link-->
     <link rel="stylesheet" href="tabeliStyle.css">
+    <link rel="stylesheet" href="lipudStyle.css">
 </head>
 <body>
 <h1>Tabelid HTML-keeles</h1>
@@ -56,5 +58,50 @@
     </tr>
     <!--------------->
 </table>
+
+<h2>Veel natuke keerulisem tabel</h2>
+<table id="lilla">
+    <caption>Tabel 4</caption>
+    <!-- 1.rida------>
+    <tr>
+        <td rowspan="4">A</td><!--vertikaalne-->
+        <td colspan="3">B</td><!--horisnotaalne-->
+    </tr>
+    <!-- 2.rida------>
+    <tr>
+        <td colspan="2">C</td><!--horisnotaalne-->
+        <td>D</td>
+    </tr>
+    <!-- 3.rida------>
+    <tr>
+        <td>E</td><!--horisnotaalne-->
+        <td>F</td><!--horisnotaalne-->
+        <td rowspan="2">J</td><!--vertikaalne-->
+    </tr>
+    <!-- 4.rida------>
+    <tr>
+        <td>G</td><!--horisnotaalne-->
+        <td>I</td><!--horisnotaalne-->
+    </tr>
+    <!--------------->
+</table>
+
+<h1>Lipud</h1>
+<table id="eesti">
+    <caption>Eesti lipp</caption>
+    <!-- 1.rida------>
+    <tr>
+        <td></td>
+    </tr>
+    <!-- 2.rida------>
+    <tr>
+        <td></td>
+    </tr>
+    <!-- 3.rida------>
+    <tr>
+        <td></td>
+    </tr>
+</table>
+
 </body>
 </html>
