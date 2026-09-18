@@ -1,12 +1,18 @@
 div#selgitus{
     background-color: #ffe642;
     width: 30%;
-    position: absolute;
+    position: fixed;
     top: 150px;
     left: 350px;
-    padding: 2%;
+    padding: 1%;
+
 }
 img{
     border: 3px solid #1b6015;
     border-radius: 60%;
+}
+.kassi-desainiga-maja {
+    width: 250px;
+    height: auto;
+    border-radius: 0;
 }
