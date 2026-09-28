@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Iseseisevtöö</title>
+  <script src="../js/MuusikaKusimustikScript.js"></script>
+</head>
+<body>
+
+<h1>Iseseisevtöö</h1>
+<form action="#">
+  <table border="1">
+    <tr>
+      <td colspan="2">
+        <fieldset>
+          <legend><strong>Muusika Kusimustik</strong></legend>
+
+          <input type="checkbox" name="muusik" id="Muusik1" value="Muusik1" onchange="MuusikuValik()">
+          <label for="Muusik1">Muusik1</label>
+          <br>
+          <input type="checkbox" name="muusik" id="Muusik2" value="Muusik2" onchange="MuusikuValik()">
+          <label for="Muusik2">Muusik2</label>
+          <br>
+          <input type="checkbox" name="muusik" id="Muusik3" value="Muusik3" onchange="MuusikuValik()">
+          <label for="Muusik3">Muusik3</label>
+          <br>
+          <input type="checkbox" name="muusik" id="Muusik4" value="Muusik4" onchange="MuusikuValik()">
+          <label for="Muusik4">Muusik4</label>
+          <br>
+          <input type="checkbox" name="muusik" id="Muusik5" value="Muusik5" onchange="MuusikuValik()">
+          <label for="Muusik5">Muusik5</label>
+        </fieldset>
+      </td>
+      <td>
+        <div id="VastusMuusikaKusimustik"></div>
+      </td>
+
+    <tr>
+      <td>
+        <fieldset>
+          <legend><strong>Muusika Kusimustik</strong></legend>
+        <textarea Koolikusimustik="kommentaar" required></textarea>
+        </fieldset>
+      </td>
+    <td>
+      <div id="KooliVastus" oninput="KooliArvamus()"></div>
+    </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
