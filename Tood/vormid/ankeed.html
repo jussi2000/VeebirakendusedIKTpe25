@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Vormid ja nupud html keeles</title>
+    <script src="../js/ankeetScript.js"></script>
 </head>
 <body>
 
@@ -13,10 +14,13 @@
             <td>
                 <!--tekstikast-->
                 <label for="nimi">Sisesta oma nimi:</label>
+            </td>
 
+            <td>
+                <input type="text" id="nimi" oninput="nimiLugemine()">
             </td>
             <td>
-                <input type="text" id="nimi">
+                <div id="vastus"></div>
             </td>
         </tr>
         <tr>
@@ -26,18 +30,21 @@
             <td>
 
                 <!-- radionupp - aniult 1 valik on õige-->
-                <input type="radio" name="sugu" id="naine">
+                <input type="radio" name="sugu" id="naine" value="naine" onclick="suguValik()">
                 <label for="naine">naine</label>
 
                 <br>
 
-                <input type="radio" name="sugu" id="mees">
+                <input type="radio" name="sugu" id="mees" value="mees" onclick="suguValik()">
                 <label for="mees">mees</label>
 
                 <br>
 
-                <input type="radio" name="sugu" id="muu">
+                <input type="radio" name="sugu" id="muu" value="muu" onclick="suguValik()">
                 <label for="muu">muu</label>
+            </td>
+            <td>
+                <div id="vastus2"></div>
             </td>
         </tr>
         <tr>
@@ -46,23 +53,24 @@
                 <fieldset>
                     <legend><strong>Spordialad</strong></legend>
 
-                    <strong>Spordialad</strong>
-                    <br>
-                    <input type="checkbox" name="spordiala" id="jooksmine">
+                    <input type="checkbox" name="spordiala" id="jooksmine" value="jooksmine" onchange="sportValik()">
                     <label for="jooksmine">jooksmine</label>
                     <br>
-                    <input type="checkbox" name="spordiala" id="ujumine">
+                    <input type="checkbox" name="spordiala" id="ujumine" value="ujumine" onchange="sportValik()">
                     <label for="ujumine">ujumine</label>
                     <br>
-                    <input type="checkbox" name="spordiala" id="uisutamine">
+                    <input type="checkbox" name="spordiala" id="uisutamine" value="uisutamine" onchange="sportValik()">
                     <label for="uisutamine">uisutamine</label>
                     <br>
-                    <input type="checkbox" name="spordiala" id="suusatamine">
+                    <input type="checkbox" name="spordiala" id="suusatamine" value="suusatamine" onchange="sportValik()">
                     <label for="suusatamine">suusatamine</label>
                     <br>
-                    <input type="checkbox" name="spordiala" id="poks">
+                    <input type="checkbox" name="spordiala" id="poks" value="poks" onchange="sportValik()">
                     <label for="poks">poks</label>
                 </fieldset>
+            </td>
+            <td>
+                <div id="vastus3"></div>
             </td>
         </tr>
         <tr>
@@ -145,6 +153,19 @@
                 <input type="week" id="hõivatud">
             </td>
         </tr>
+        <!-------------------->
+        <tr>
+            <td>
+                <input type="reset" value="Puhasta" onclick="Puhasta()">
+            </td>
+            <td>
+                <input type="button" value="Näita andmeid" onclick="tervitus()">
+            </td>
+            <td>
+                <div id="vastus4"></div>
+            </td>
+        </tr>
+        <!-------------------->
         </table>
 
 </form>
