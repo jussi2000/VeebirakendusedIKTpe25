@@ -14,7 +14,7 @@ function MuusikuValik() {
     if (Muusik5.checked) { muusikud += Muusik5.value + ', '; }
 
     if (muusikud == "") {
-        VastusMuusikaKusimustik.innerHTML = "Sinu valitud muusikud: -";
+        VastusMuusikaKusimustik.innerHTML = "Sinu valitud muusikud: ";
     } else {
         // Eemaldame lõpust üleliigse koma ja tühiku
         muusikud = muusikud.slice(0, -2);
@@ -99,7 +99,6 @@ function KuvaKokkuvote() {
     let KokkuvoteAla = document.getElementById("KokkuvoteAla");
 
     KokkuvoteAla.innerHTML =
-        '<strong>Küsitluse vastused:</strong><br>' +
         'Valitud muusikud: ' + '<br>' +
         'Arvamus koolis: ' + arvamus + '<br>' +
         'Kuulamise tunnid: ' + tunnid + '<br>' +
