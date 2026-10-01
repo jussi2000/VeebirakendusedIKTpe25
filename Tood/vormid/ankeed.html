@@ -88,13 +88,16 @@
                 <label for="tund">Mis klubi sa külastad?</label>
             </td>
         <td>
-            <select name="klubi" id="klubi">
+            <select name="klubi" id="klubi" onchange="klubiValik()">
                 <option value="Vali">Vali...</option> <!--Ripploend-->
                 <option value="gym">GYM</option>
                 <option value="myfitness">MyFitness</option>
                 <option value="gym24">Gym24</option>
                 <option value="kalevspa">KalevSPA</option>
             </select>
+        </td>
+        <td>
+            <div id="vastus5"></div>
         </td>
         </tr>
         <tr>
@@ -110,9 +113,25 @@
                 <label for="kuupaev">Millal oli su viimane trenn?</label>
             </td>
             <td>
-                <input type="date" id="kuupaev" min="2026-01-01" max="2026-12-31">
+                <input type="date" id="kuupaev" min="2026-01-01" max="2026-12-31" onchange="kuupaevValik()">
+            </td>
+            <td>
+                <div id="vastus6"></div>
             </td>
         </tr>
+
+        <tr>
+            <td>
+                <label for="kogemus">Mitu tundi päevas sa teed trenni?</label>
+            </td>
+            <td>
+                <input type="range" id="kogemus" min="0" max="24" step="1" value="0" oninput="rangevalik()">
+            </td>
+            <td>
+                <div id="vastus7"></div>
+            </td>
+        </tr>
+
         <tr>
             <td>
                 <label for="email">Sisesta oma e-mail:</label>
