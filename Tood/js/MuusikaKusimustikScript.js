@@ -90,7 +90,7 @@ function StiiliValik() {
 
 
 function KuvaKokkuvote() {
-    let muusikud = MuusikuValik();
+    let muusik = MuusikuValik();
     let arvamus = KooliArvamus();
     let tunnid = TundideArv();
     let raadio = RaadioKuulamine();
@@ -99,12 +99,12 @@ function KuvaKokkuvote() {
     let KokkuvoteAla = document.getElementById("KokkuvoteAla");
 
     KokkuvoteAla.innerHTML =
-        'Valitud muusikud: ' + '<br>' +
-        'Arvamus koolis: ' + arvamus + '<br>' +
-        'Kuulamise tunnid: ' + tunnid + '<br>' +
-        'Raadio kuulamine: ' + raadio + '<br>' +
-        'Nimetatud jaamad: ' + jaamad + '<br>' +
-        'Eelistatud stiil: ' + stiil;
+        'Valitud muusikud: ' + muusik + '<br>'
+        + 'Arvamus koolis: ' + arvamus + '<br>'
+        + 'Kuulamise tunnid: ' + tunnid + '<br>'
+        + 'Raadio kuulamine: ' + raadio + '<br>'
+        + 'Nimetatud jaamad: ' + jaamad + '<br>'
+        + 'Eelistatud stiil: ' + stiil;
 
     KokkuvoteAla.style.backgroundColor = "#ffed75";
 }
@@ -118,5 +118,4 @@ function Puhasta() {
     document.getElementById("JaamadVastus").innerHTML = "";
     document.getElementById("StiilVastus").innerHTML = "";
     document.getElementById("KokkuvoteAla").innerHTML = "";
-    document.getElementById("KokkuvoteAla").style.backgroundColor = "transparent";
 }
