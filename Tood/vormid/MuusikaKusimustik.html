@@ -1,52 +1,132 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-    <meta charset="UTF-8">
-    <title>Iseseisevtöö</title>
+  <meta charset="UTF-8">
+  <title>Iseseisevtöö - Muusikaküsitlus</title>
   <script src="../js/MuusikaKusimustikScript.js"></script>
 </head>
 <body>
 
-<h1>Iseseisevtöö</h1>
+<h1>Muusika küsimustik</h1>
 <form action="#">
   <table border="1">
+
     <tr>
       <td colspan="2">
         <fieldset>
-          <legend><strong>Muusika Kusimustik</strong></legend>
-
-          <input type="checkbox" name="muusik" id="Muusik1" value="Muusik1" onchange="MuusikuValik()">
-          <label for="Muusik1">Muusik1</label>
+          <legend><strong>Milliseid muusikuid/ansambleid sa tead?</strong></legend>
+          <input type="checkbox" name="muusik" id="Muusik1" value="Terminaator" onchange="MuusikuValik()">
+          <label for="Muusik1">Terminaator</label>
           <br>
-          <input type="checkbox" name="muusik" id="Muusik2" value="Muusik2" onchange="MuusikuValik()">
-          <label for="Muusik2">Muusik2</label>
+          <input type="checkbox" name="muusik" id="Muusik2" value="Smilers" onchange="MuusikuValik()">
+          <label for="Muusik2">Smilers</label>
           <br>
-          <input type="checkbox" name="muusik" id="Muusik3" value="Muusik3" onchange="MuusikuValik()">
-          <label for="Muusik3">Muusik3</label>
+          <input type="checkbox" name="muusik" id="Muusik3" value="Trad.Attack!" onchange="MuusikuValik()">
+          <label for="Muusik3">Trad.Attack!</label>
           <br>
-          <input type="checkbox" name="muusik" id="Muusik4" value="Muusik4" onchange="MuusikuValik()">
-          <label for="Muusik4">Muusik4</label>
+          <input type="checkbox" name="muusik" id="Muusik4" value="5MIINUST" onchange="MuusikuValik()">
+          <label for="Muusik4">5MIINUST</label>
           <br>
-          <input type="checkbox" name="muusik" id="Muusik5" value="Muusik5" onchange="MuusikuValik()">
-          <label for="Muusik5">Muusik5</label>
+          <input type="checkbox" name="muusik" id="Muusik5" value="Tommy Cash" onchange="MuusikuValik()">
+          <label for="Muusik5">Tommy Cash</label>
         </fieldset>
       </td>
       <td>
         <div id="VastusMuusikaKusimustik"></div>
       </td>
+    </tr>
+
 
     <tr>
       <td>
-        <fieldset>
-          <legend><strong>Muusika Kusimustik</strong></legend>
-        <textarea Koolikusimustik="kommentaar" required></textarea>
-        </fieldset>
+        <label for="kooliTekst">Mida arvad muusika kuulamisest koolis?</label>
       </td>
-    <td>
-      <div id="KooliVastus" oninput="KooliArvamus()"></div>
-    </td>
+      <td>
+        <textarea id="kooliTekst" oninput="KooliArvamus()"></textarea>
+      </td>
+      <td>
+        <div id="KooliVastus"></div>
+      </td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <label for="tunnid">Mitu tundi päevas sa kuulad muusikat?</label>
+      </td>
+      <td>
+        <input type="range" id="tunnid" min="0" max="24" step="1" value="0" oninput="TundideArv()">
+      </td>
+      <td>
+        <div id="TundideVastus"></div>
+      </td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <strong>Kas sa kuulad raadiot?</strong>
+      </td>
+      <td>
+        <input type="radio" name="raadioKuulamine" id="raadioJah" value="jah" onclick="RaadioKuulamine()">
+        <label for="raadioJah">jah</label>
+        <br>
+        <input type="radio" name="raadioKuulamine" id="raadioEi" value="ei" onclick="RaadioKuulamine()">
+        <label for="raadioEi">ei</label>
+      </td>
+      <td>
+        <div id="RaadioVastus"></div>
+      </td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <label for="raadioJaamad">Milliseid raadiojaamu oskad nimetada?</label>
+      </td>
+      <td>
+        <input type="text" id="raadioJaamad" oninput="NimetatudJaamad()">
+      </td>
+      <td>
+        <div id="JaamadVastus"></div>
+      </td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <label for="muusikaStiil">Millist muusikat sa kõige rohkem kuulad?</label>
+      </td>
+      <td>
+        <select id="muusikaStiil" onchange="StiiliValik()">
+          <option value="Vali">Vali...</option>
+          <option value="Pop">Pop</option>
+          <option value="Rock">Rock</option>
+          <option value="Räp">Räp</option>
+          <option value="Jazz">Jazz</option>
+          <option value="Klassika">Klassika</option>
+          <option value="Elektrooniline">Elektrooniline</option>
+        </select>
+      </td>
+      <td>
+        <div id="StiilVastus"></div>
+      </td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <input type="reset" value="Puhasta" onclick="Puhasta()">
+      </td>
+      <td>
+        <input type="button" value="Saada" onclick="KuvaKokkuvote()">
+      </td>
+      <td>
+        <div id="KokkuvoteAla"></div>
+      </td>
     </tr>
   </table>
 </form>
+
 </body>
 </html>
