@@ -1,0 +1,25 @@
+body {
+    font-family: 'Comic Neue', cursive;
+    min-height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(to bottom right, #b9b9d5, #4d7dec, #19191b);
+    /*Kasutasin background color'i tegemiseks: https://www.w3schools.com/css/css3_gradients.asp*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#KokkuvoteAla {
+    color: #ffffff;
+}
+table {
+    background-color: #ffffff;
+    border: 2px solid #4d7dec;
+}
+h1 {
+    background-color: white;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 2px solid #4d7dec;
+}
