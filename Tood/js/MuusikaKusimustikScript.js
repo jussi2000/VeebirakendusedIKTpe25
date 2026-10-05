@@ -86,6 +86,7 @@ function TundideArv() {
 function RaadioKuulamine(valik) {
     let RaadioVastus = document.getElementById("RaadioVastus");
     let pilt = document.getElementById("piltvastus4");
+
     let raadioJah = document.getElementById("raadioJah");
     let raadioEi = document.getElementById("raadioEi");
 
