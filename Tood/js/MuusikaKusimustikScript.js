@@ -9,23 +9,32 @@ function MuusikuValik(viimaneValik) {
     let Muusik5 = document.getElementById("Muusik5");
 
     let muusikud = "";
-    if (Muusik1.checked) { muusikud += Muusik1.value + ', '; }
-    if (Muusik2.checked) { muusikud += Muusik2.value + ', '; }
-    if (Muusik3.checked) { muusikud += Muusik3.value + ', '; }
-    if (Muusik4.checked) { muusikud += Muusik4.value + ', '; }
-    if (Muusik5.checked) { muusikud += Muusik5.value + ', '; }
+
+    if (Muusik1.checked) {muusikud += Muusik1.value + ', ';
+    }
+    if (Muusik2.checked) {muusikud += Muusik2.value + ', ';
+    }
+    if (Muusik3.checked) {muusikud += Muusik3.value + ', ';
+    }
+    if (Muusik4.checked) {muusikud += Muusik4.value + ', ';
+    }
+    if (Muusik5.checked) {muusikud += Muusik5.value + ', ';
+    }
 
     if (muusikud == "") {
+
         VastusMuusikaKusimustik.innerHTML = "Sinu valitud muusikud: ";
         pilt.style.display = "none";
+
     } else {
+
         muusikud = muusikud.slice(0, -2);
+
         VastusMuusikaKusimustik.innerHTML = "Sinu valitud muusikud: " + muusikud;
 
-        if (viimaneValik && document.querySelector(`input[value="${viimaneValik}"]`).checked) {
-            pilt.src = "pildid/" + viimaneValik + ".jpg";
-            pilt.style.display = "block";
-        }
+        /*Küsimuse vastuse 1. pilt*/
+        pilt.src = "Kusimus1Vastus.png";
+        pilt.style.display = "block";
     }
     VastusMuusikaKusimustik.style.color = "#3d77ff";
 
@@ -41,8 +50,9 @@ function KooliArvamus() {
     KooliVastus.innerHTML = "Sinu arvamus: " + kooliTekst.value;
     KooliVastus.style.color = "#3D77FFFF";
 
+    /*Küsimuse vastuse 2. pilt*/
     if (kooliTekst.value.trim() !== "") {
-        pilt.src = "pildid/kool.jpg";
+        pilt.src = "Kusimus2Vastus.png";
         pilt.style.display = "block";
     } else {
         pilt.style.display = "none";
@@ -58,10 +68,12 @@ function TundideArv() {
     let pilt = document.getElementById("piltvastus3");
 
     TundideVastus.innerHTML = "Sa kuulad muusikat " + tunnid.value + " tundi päevas";
+
     TundideVastus.style.color = "#3D77FFFF";
 
+    /*Küsimuse vastuse 3. pilt*/
     if (parseInt(tunnid.value) > 0) {
-        pilt.src = "pildid/tunnid_" + tunnid.value + ".jpg";
+        pilt.src = "Kusimus3Vastus.png";
         pilt.style.display = "block";
     } else {
         pilt.style.display = "none";
@@ -74,23 +86,36 @@ function TundideArv() {
 function RaadioKuulamine(valik) {
     let RaadioVastus = document.getElementById("RaadioVastus");
     let pilt = document.getElementById("piltvastus4");
+
     let raadioJah = document.getElementById("raadioJah");
     let raadioEi = document.getElementById("raadioEi");
 
     let raadioValik = "";
+
     if (raadioJah.checked) {
+
         raadioValik = raadioJah.value;
+
+        /*Küsimuse vastuse 4. jah pilt*/
+        pilt.src = "Kusimus4JahVastus.png";
+        pilt.style.display = "block";
+
     } else if (raadioEi.checked) {
+
         raadioValik = raadioEi.value;
+
+        /*Küsimuse vastuse 4. ei pilt*/
+        pilt.src = "Kusimus4EiVastus.png";
+        pilt.style.display = "block";
+
+    } else {
+
+        pilt.style.display = "none";
     }
 
     RaadioVastus.innerHTML = "Raadio kuulamine: " + raadioValik;
-    RaadioVastus.style.color = "#3D77FFFF";
 
-    if (valik) {
-        pilt.src = "pildid/" + valik + ".jpg";
-        pilt.style.display = "block";
-    }
+    RaadioVastus.style.color = "#3D77FFFF";
 
     return raadioValik;
 }
@@ -102,12 +127,17 @@ function NimetatudJaamad() {
     let pilt = document.getElementById("piltvastus5");
 
     JaamadVastus.innerHTML = "Sinu nimetatud jaamad: " + raadioJaamad.value;
+
     JaamadVastus.style.color = "#3D77FFFF";
 
+    /*Küsimuse vastuse 5. pilt*/
     if (raadioJaamad.value.trim() !== "") {
-        pilt.src = "pildid/jaamad.jpg";
+
+        pilt.src = "Kusimus5Vastus.png";
         pilt.style.display = "block";
+
     } else {
+
         pilt.style.display = "none";
     }
 
@@ -121,18 +151,21 @@ function StiiliValik() {
     let pilt = document.getElementById("piltvastus6");
 
     StiilVastus.innerHTML = "Sinu vastus: " + muusikaStiil.value;
+
     StiilVastus.style.color = "#3D77FFFF";
 
+    /*Küsimuse vastuse 6. pilt*/
     if (muusikaStiil.value !== "Vali") {
-        pilt.src = "pildid/" + muusikaStiil.value + ".jpg";
+        pilt.src = "Kusimus6Vastus.png";
         pilt.style.display = "block";
+
     } else {
+
         pilt.style.display = "none";
     }
 
     return muusikaStiil.value;
 }
-
 
 function KuvaKokkuvote() {
     let muusik = MuusikuValik();
@@ -141,16 +174,16 @@ function KuvaKokkuvote() {
     let raadio = RaadioKuulamine();
     let jaamad = NimetatudJaamad();
     let stiil = StiiliValik();
+
     let KokkuvoteAla = document.getElementById("KokkuvoteAla");
-    let pilt = document.getElementById("piltvastus7");
 
     KokkuvoteAla.innerHTML =
-        ' Valitud muusikud: ' + muusik + '<br>'
-        + 'Arvamus koolis: ' + arvamus + '<br>'
-        + 'Kuulamise tunnid: ' + tunnid + '<br>'
-        + 'Raadio kuulamine: ' + raadio + '<br>'
-        + 'Nimetatud jaamad: ' + jaamad + '<br>'
-        + 'Eelistatud stiil: ' + stiil;
+        'Valitud muusikud: ' + muusik + '<br>' +
+        'Arvamus koolis: ' + arvamus + '<br>' +
+        'Kuulamise tunnid: ' + tunnid + '<br>' +
+        'Raadio kuulamine: ' + raadio + '<br>' +
+        'Nimetatud jaamad: ' + jaamad + '<br>' +
+        'Eelistatud stiil: ' + stiil;
 
     KokkuvoteAla.style.backgroundColor = "#4d7dec";
 }
@@ -165,12 +198,11 @@ function Puhasta() {
     document.getElementById("StiilVastus").innerHTML = "";
     document.getElementById("KokkuvoteAla").innerHTML = "";
 
-    //kustutab ära need kõik pildid ka
     document.getElementById("piltvastus1").style.display = "none";
     document.getElementById("piltvastus2").style.display = "none";
     document.getElementById("piltvastus3").style.display = "none";
     document.getElementById("piltvastus4").style.display = "none";
     document.getElementById("piltvastus5").style.display = "none";
     document.getElementById("piltvastus6").style.display = "none";
-    document.getElementById("piltvastus7").style.display = "none";
+
 }

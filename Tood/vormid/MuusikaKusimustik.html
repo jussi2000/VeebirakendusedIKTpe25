@@ -6,9 +6,11 @@
   <script src="../js/MuusikaKusimustikScript.js"></script>
   <link rel="stylesheet" href="MuusikaKusimustikStyle.css">
 </head>
+
 <body>
 
 <h1>Muusika küsimustik</h1>
+
 <form action="#">
   <table border="1">
 
@@ -16,88 +18,109 @@
       <td colspan="2">
         <fieldset>
           <legend><strong>Milliseid muusikuid/ansambleid sa tead?</strong></legend>
+
           <input type="checkbox" name="muusik" id="Muusik1" value="Terminaator" onchange="MuusikuValik(this.value)">
           <label for="Muusik1">Terminaator</label>
           <br>
+
           <input type="checkbox" name="muusik" id="Muusik2" value="Smilers" onchange="MuusikuValik(this.value)">
           <label for="Muusik2">Smilers</label>
           <br>
+
           <input type="checkbox" name="muusik" id="Muusik3" value="Anne Veski" onchange="MuusikuValik(this.value)">
           <label for="Muusik3">Anne Veski</label>
           <br>
+
           <input type="checkbox" name="muusik" id="Muusik4" value="5MIINUST" onchange="MuusikuValik(this.value)">
           <label for="Muusik4">5MIINUST</label>
           <br>
+
           <input type="checkbox" name="muusik" id="Muusik5" value="Tommy Cash" onchange="MuusikuValik(this.value)">
           <label for="Muusik5">Tommy Cash</label>
         </fieldset>
       </td>
+
       <td>
         <div id="VastusMuusikaKusimustik"></div>
-        <img id="piltvastus1" src="kass1.png" alt="Muusiku pilt" style="display: none; max-width: 150px; margin-top: 10px;">
+        <img id="piltvastus1" src="" alt="Küsimus 1 vastuse pilt">
       </td>
     </tr>
+
 
     <tr>
       <td>
         <label for="kooliTekst">Mida arvad muusika kuulamisest koolis?</label>
       </td>
+
       <td>
         <textarea id="kooliTekst" oninput="KooliArvamus()"></textarea>
       </td>
+
       <td>
         <div id="KooliVastus"></div>
-        <img id="piltvastus2" src="kass3.png" alt="Kooli arvamus pilt" style="display: none; max-width: 150px; margin-top: 10px;">
+        <img id="piltvastus2" src="" alt="Küsimus 2 vastuse pilt">
       </td>
     </tr>
+
 
     <tr>
       <td>
         <label for="tunnid">Mitu tundi päevas sa kuulad muusikat?</label>
       </td>
+
       <td>
         <input type="range" id="tunnid" min="0" max="24" step="1" value="0" oninput="TundideArv()">
       </td>
+
       <td>
         <div id="TundideVastus"></div>
-        <img id="piltvastus3" src="" alt="Tundide pilt" style="display: none; max-width: 150px; margin-top: 10px;">
+        <img id="piltvastus3" src="" alt="Küsimus 3 vastuse pilt">
       </td>
     </tr>
+
 
     <tr>
       <td>
         <strong>Kas sa kuulad raadiot?</strong>
       </td>
+
       <td>
         <input type="radio" name="raadioKuulamine" id="raadioJah" value="jah" onclick="RaadioKuulamine(this.value)">
         <label for="raadioJah">jah</label>
         <br>
+
         <input type="radio" name="raadioKuulamine" id="raadioEi" value="ei" onclick="RaadioKuulamine(this.value)">
         <label for="raadioEi">ei</label>
       </td>
+
       <td>
         <div id="RaadioVastus"></div>
-        <img id="piltvastus4" src="" alt="Raadio kuulamine pilt" style="display: none; max-width: 150px; margin-top: 10px;">
+        <img id="piltvastus4" src="" alt="Küsimus 4 vastuse pilt">
       </td>
     </tr>
+
 
     <tr>
       <td>
         <label for="raadioJaamad">Milliseid raadiojaamu oskad nimetada?</label>
       </td>
+
       <td>
         <input type="text" id="raadioJaamad" oninput="NimetatudJaamad()">
       </td>
+
       <td>
         <div id="JaamadVastus"></div>
-        <img id="piltvastus5" src="" alt="Raadiojaamade pilt" style="display: none; max-width: 150px; margin-top: 10px;">
+        <img id="piltvastus5" src="" alt="Küsimus 5 vastuse pilt">
       </td>
     </tr>
+
 
     <tr>
       <td>
         <label for="muusikaStiil">Millist muusikat sa kõige rohkem kuulad?</label>
       </td>
+
       <td>
         <select id="muusikaStiil" onchange="StiiliValik()">
           <option value="Vali">Vali...</option>
@@ -109,9 +132,10 @@
           <option value="Elektrooniline">Elektrooniline</option>
         </select>
       </td>
+
       <td>
         <div id="StiilVastus"></div>
-        <img id="piltvastus6" src="" alt="Muusikastiili pilt" style="display: none; max-width: 150px; margin-top: 10px;">
+        <img id="piltvastus6" src="" alt="Küsimus 6 vastuse pilt">
       </td>
     </tr>
 
@@ -124,7 +148,6 @@
       </td>
       <td>
         <div id="KokkuvoteAla"></div>
-        <img id="piltvastus7" src="" alt="Kokkuvõtte pilt" style="display: none; max-width: 150px; margin-top: 10px;">
       </td>
     </tr>
   </table>

@@ -23,3 +23,17 @@ h1 {
     border-radius: 10px;
     border: 2px solid #4d7dec;
 }
+
+/* Piltide kujundus, kuna muidu on pildid liiga suured*/
+#piltvastus1,
+#piltvastus2,
+#piltvastus3,
+#piltvastus4,
+#piltvastus5,
+#piltvastus6 {
+    display: none;
+    max-width: 150px;
+    max-height: 150px;
+    margin-top: 10px;
+    object-fit: contain;
+}
