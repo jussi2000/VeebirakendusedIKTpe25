@@ -1,0 +1,47 @@
+body{
+    font-family: Georgia, serif;
+    background-color: #d8f1a7
+}
+img{
+    width:200px;
+    border: 2pt solid #3d983d;
+    border-radius: 50%;
+}
+input[type=radio]{
+    accent-color: #d82727;
+
+}
+input[type=button]{
+    width:20%;
+    border: 2pt solid green;
+    padding: 1%;
+    background-color: #c8e8c8;
+    border-radius: 10px;
+    font-family: Georgia, serif;
+}
+div#vastus{
+    width:20%;
+    border: 2pt solid green;
+    padding: 1%;
+    background-color: #c8e8c8;
+    border-radius: 10px;
+    position: absolute;
+    left: 200px;
+    top: 300px;
+}
+label{
+    font-weight: bold;
+    padding: 2px;
+    margin-right: 10px;
+}
+label:hover{
+    background-color: #8cbfff;
+    border: 2pt solid #188cea;
+    border-radius: 10px;
+}
+h1{
+    color: #008000FF;
+}
+h2{
+    color: #188CEAFF;
+}

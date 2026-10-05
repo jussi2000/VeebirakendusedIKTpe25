@@ -4,10 +4,28 @@
     <meta charset="UTF-8">
     <title>Leht piltidega</title>
     <script src="../js/piltScript.js"></script>
+    <link rel="stylesheet" href="piltStyle.css">
 </head>
 <body onload="randomPilt()">
 <h1>Juhuslik (random) pilt</h1>
 <input type="button" value="juhuslik pilt" onclick="randomPilt()">
 <img src="tyhi.png" id="randomPilt" alt="juhuslik pilt">
+
+<h2>Mõistatus</h2>
+<input type="radio" name="valik" id="v1" value="../pildid/1.png" onclick="radioValik()">
+<label for="v1">pilt näitab 1</label>
+<br>
+<input type="radio" name="valik" id="v2" value="../pildid/2.png" onclick="radioValik()">
+<label for="v2">pilt näitab 2</label>
+<br>
+<input type="radio" name="valik" id="v3" value="../pildid/3.png" onclick="radioValik()">
+<label for="v3">pilt näitab 3</label>
+<br>
+<input type="radio" name="valik" id="v4" value="../pildid/tyhi.png" onclick="radioValik()">
+<label for="v4">pilt ei näita numbrit</label>
+<br>
+<br>
+<div id="vastus">Siia tuleb vastus...</div>
+
 </body>
 </html>
