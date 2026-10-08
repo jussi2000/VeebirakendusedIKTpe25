@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Saia kalkulaator</title>
+    <script src="../js/saiakalkScript.js"></script>
+</head>
+<body>
+<h1>Saia kalkulaator</h1>
+<label for="kogus">Kogus:</label>
+<input type="number" id="kogus" min="1" max="10" step="1" onchange="saiaKalk()">
+<br>
+<label for="saiatyyp">Palun vali saia tüüp.</label>
+<select name="saiatyyp" id="saiatyyp" onchange="saiaKalk()">
+    <option value="vali">vali..</option>
+    <option value="mooni">moonisai</option>
+    <option value="juustu">juustusai</option>
+    <option value="pontsik">pontsik</option>
+    <option value="kaneeli">kaneelisai</option>
+</select>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAHPSTA9Gt437IJPqW1doY_G5JW02VzGUwvA-iwkvWSQ&s=10"
+     alt="" id="pilt" width="150" height="150">
+
+<div id="vastus"></div>
+</body>
+</html>
