@@ -1,0 +1,61 @@
+section#yld{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+section#osa1{
+    border: 1pt solid black;
+    border-radius: 10pt;
+    padding: 10pt;
+    width: 30%;
+}
+img#pilt{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+select option {
+    background-color: #c6f3ff;
+    color: #2d6fff;
+}
+select{
+    border-radius: 15px;
+    text-align: right;
+}
+input[type=number] {
+    border-radius: 15px;
+    padding: 10px;
+    text-align: right;
+}
+label{
+    font-weight: bold;
+}
+label:hover{/*fookuses*/
+    background-color: #c6f3ff;
+    border-radius: 10px;
+    border: 1pt solid black;
+    padding: 2px;
+}
+section#osa2{
+    border: 1pt solid black;
+    border-radius: 10pt;
+    padding: 10pt;
+    width: 40%;
+}
+img#pilt{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+section#osa3 {
+    border: 1pt solid black;
+    border-radius: 10pt;
+    padding: 10pt;
+    width: 30%;
+}
+section#osa4 {
+    border: 1pt solid black;
+    border-radius: 10pt;
+    padding: 10pt;
+    width: 30%;
+}
