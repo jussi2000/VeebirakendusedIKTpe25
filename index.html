@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Johanna veebirakenduate aluste tööd</title>
     <link rel="stylesheet" href="style.css">
+    <script src="tood/js/kuupaevaFunktsioonid.js"></script>
 </head>
 <body>
 <!--veebiliehe sisu, mida näeb kasutaja-->
@@ -49,7 +50,14 @@
         <div>ise tehtud pilt
         <img src="Misty.png" alt="See on Misty" id="erapilt">
         </div>
+
+        <input type="button" value="Täna on " onclick="tanaon()">
+        <div id="kuupaevaVastus"></div>
+        <br>
+        <input type="button" value="Sünnipäevani " onclick="synnipaevani()">
+        <div id="kuupaevaVastus2"></div>
     </section>
+
 
 </main>
 <!--jalus-->
