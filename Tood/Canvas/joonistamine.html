@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Joonistamisrakendus canvas-ga</title>
+    <link rel="stylesheet" href="canvasStyle.css">
+    <script src="joonisScript.js"></script>
+</head>
+<body>
+<h1>Joonistamisrakendus canvas-ga</h1>
+<input type="button" value="Puhasta" onclick="puhasta()">
+<canvas id="tahvel" width="300" height="400"></canvas>
+<input type="button" value="Joon" onclick="sirgeJoon()">
+<br>
+<input type="button" value="Kolmnurk" onclick="kolmnurk()">
+<br>
+<input type="button" value="Ristkülik" onclick="ristkylik()">
+<label for="laius">Laius</label>
+<input type="number" min="1" max="300" step="10" id="laius" value="100" onchange="ristkylik()">
+<label for="korgus">Kõrgus</label>
+<input type="number" min="1" max="300" step="10" id="korgus" value="100" onchange="ristkylik()">
+<br>
+<input type="button" value="ring" onclick="ring()">
+<label for="raadius">Raadius</label>
+<input type="number" min="1" max="150" step="1" id="raadius" value="50" onchange="ring()">
+<input type="color" id="varv" value="#0000ff" onchange="ring()">
+<br><br>
+
+<!-- smile face osad -->
+<input type="button" value="Nägu" onclick="nagu()">
+<input type="button" value="Nina" onclick="nina()">
+<input type="button" value="Kõrvad" onclick="korvad()">
+<input type="button" value="Suu" onclick="suu()">
+
+<!-- Vasaku silma nupp -->
+<input type="button" value="Vasak silm" onclick="VasakSilm()">
+
+<!-- Parema silma nupp -->
+<input type="button" value="Parem silm" onclick="ParemSilm()">
+
+<!-- teeb terve näo ühe  -->
+<br>
+<br>
+<button onclick="smileface()">Joonista nägu</button>
+<br>
+<br>
+<input type="button" value="Pilt" onclick="pilt()">
+</body>
+</html>
