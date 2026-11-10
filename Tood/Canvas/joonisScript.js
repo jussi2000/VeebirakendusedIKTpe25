@@ -129,7 +129,7 @@ function VasakSilm() {
         t.beginPath();
         t.lineWidth = 2;
         t.strokeStyle = "black";
-        t.arc(110, 200, 25, 0, 2 * Math.PI); // Raadius
+        t.arc(110, 200, 20, 0, 2 * Math.PI); // Raadius
         t.stroke();
 
         //silma sisu
