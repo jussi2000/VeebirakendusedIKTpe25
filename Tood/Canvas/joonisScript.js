@@ -169,7 +169,7 @@ function pilt(){
         const fail=new Image();
         fail.src="https://pngimg.com/uploads/cat/cat_PNG50447.png";
         fail.onload=()=>{
-            t.drawImage(fail, 50,50,100,100);
+            t.drawImage(fail, 70,25,160,165);
         }
 
     }
