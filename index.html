@@ -6,6 +6,45 @@
     <title>Johanna veebirakenduate aluste tööd</title>
     <link rel="stylesheet" href="style.css">
     <script src="tood/js/kuupaevaFunktsioonid.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+            integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI="
+            crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            //paremale nupu vajutamine
+            $('#paremale').click(function () {
+                $('#osa1').animate({left: '200px'}, 1000);
+                $(this).hide();
+                $('#vasakule').show();
+            });
+
+            //vasakule nupu vajutamine
+            $('#vasakule').click(function () {
+                $('#osa1').animate({left: '0px'}, 1000);
+                $(this).hide();
+                $('#paremale').show();
+            });
+        });
+
+        function koordLugemine(event, ui){
+            let koht=ui.offset;
+            $('#osa1').html('x: '+koht.left + ' || y: '+koht.top);
+        }
+
+        function leheStart(){
+            $('#osa1').mouseenter(tekstPunaseks);
+            $('#osa1').mouseleave(tekstMustaks);
+            $('#osa1').draggable();
+
+        }
+    </script>
+
 </head>
 <body>
 <!--veebiliehe sisu, mida näeb kasutaja-->
@@ -45,6 +84,14 @@
         <p>Palun kasuta navigeerimismenüü, et leida info!</p>
     </section>
 
+    <section>
+        <input type="button" value="paremale" id="paremale">
+
+        <input type="button" value="vasakule" id="vasakule">
+
+        </section>
+
+
     <section id = "osa2">
         <h2>päevapilt</h2>
         <div>ise tehtud pilt
@@ -57,7 +104,6 @@
         <input type="button" value="Sünnipäevani " onclick="synnipaevani()">
         <div id="kuupaevaVastus2"></div>
     </section>
-
 
 </main>
 <!--jalus-->

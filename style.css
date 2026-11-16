@@ -23,6 +23,8 @@ footer{
     border-radius: 60px 0 0 0;
 }
 section#osa1{
+    position: relative;
+    left: 0px;
     padding: 5%;
     border: 1px solid #8c4040; /*kasuta nt: dotted, dashed, double, outline, groove*/
     margin: 20px;/*kui ääres tekst kastiga asub*/
@@ -93,5 +95,3 @@ nav ul li a:hover{
     background-color: #92dfc7;
 }
 
-/*Meediagalerii lehtvvvvv*/
-/*-------------------------------------------*/

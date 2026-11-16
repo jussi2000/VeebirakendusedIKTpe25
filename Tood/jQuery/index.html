@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery kasutamine</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+                   integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI="
+                   crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            //paremale nupu vajutamine
+            $('#paremale').click(function () {
+                $('#tekstikast').animate({left: '200px'}, 1000);
+                $(this).hide();
+                $('#vasakule').show();
+            });
+            //vasakule nupu vajutamine
+            $('#vasakule').click(function () {
+                $('#tekstikast').animate({left: '0px'}, 1000);
+                $(this).hide();
+                $('#paremale').show();
+            });
+        });
+
+        //värvib teksti punaseks
+        function tekstPunaseks(){
+            $('#tekstikast').css('color', 'red');
+        }
+        function tekstMustaks(){
+            $('#tekstikast').css('color', 'black');
+        }
+        function koordLugemine(event, ui){
+            let koht=ui.offset;
+            $('#kordinaadid').html('x: '+koht.left + ' || y: '+koht.top);
+        }
+
+        function leheStart(){
+            $('#tekstikast').mouseenter(tekstPunaseks);
+            $('#tekstikast').mouseleave(tekstMustaks);
+            $('#tekstikast').draggable();
+            $('#tekstikast').bind('drag', koordLugemine); //kordinaatide lugemine
+            $('#pilt').draggable();
+            $('#pilt').bind('drag', koordLugemine);
+
+        }
+
+    </script>
+
+    <link rel="stylesheet" href="queryStyle.css">
+</head>
+<body onload="leheStart()">
+<header>
+    <h1>jQuery kasutamine</h1>
+</header>
+<main>
+    <section>
+        <h2>jQuery CDN</h2>
+        <div id="tekstikast">
+            jQuery - see on raamistik (teek)
+            <br>
+            CDN - raamistiku allalaadimisviisis välisserverist
+            <br>
+            Ametlik CDN asub https://releases.jquery.com
+        </div>
+        <br>
+
+        <input type="button" value="paremale" id="paremale">
+
+        <input type="button" value="vasakule" id="vasakule">
+
+        <input type="button" value="peida tekst"
+               onclick="$('#tekstikast').hide(2000)">
+
+        <input type="button" value="kuva teksti"
+               onclick="$('#tekstikast').show(2000, alert('kohe kuvab teksti'))">
+    </section>
+    <div id="kordinaadid"></div>
+    <img src="https://static.vecteezy.com/system/resources/previews/055/067/672/non_2x/blue-cat-is-isolated-on-transparent-background-free-png.png"
+         alt="" id="pilt">
+</main>
+
+</body>
+</html>

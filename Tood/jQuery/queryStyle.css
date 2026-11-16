@@ -1,0 +1,17 @@
+#tekstikast{
+    position: relative;
+    left: 0px;
+    width: 200px;
+    border: solid 1px grey;
+    background-color: lightgray;
+}
+#h2{
+    position: relative;
+    left: 0px;
+    width: 200px;
+}
+img{
+    width: 100px;
+    position: relative;
+    left: 0;
+}
