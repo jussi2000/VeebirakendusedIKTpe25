@@ -5,13 +5,79 @@
   <title>Iseseisevtöö - Muusikaküsitlus</title>
   <script src="../js/MuusikaKusimustikScript.js"></script>
   <link rel="stylesheet" href="MuusikaKusimustikStyle.css">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
+
+  <script>
+    $(function(){
+      // peidame vead
+      //.viga = class= 'iga'
+      //#viga = id= 'viga'
+      $('.viga').hide();
+
+      // puhastusnupp
+      $('#puhasta').click(function(){
+        $('#muusikaVorm')[0].reset();
+        $('.viga').hide();
+      });
+
+      // valideerimine, kui vorm on saadetud
+      $('#muusikaVorm').submit(function(event){
+        let valid = true;
+
+
+        // 1. Checkbox
+        if($('input[name="muusik"]:checked').length === 0){
+          $('#viga1').show();
+          valid = false;
+        } else { $('#viga1').hide(); }
+
+        // 2. Textarea
+        if($('#kooliTekst').val().trim() === ""){
+          $('#viga2').show();
+          valid = false;
+        } else { $('#viga2').hide(); }
+
+        // 3. Number (0–24)
+        let tunnid = $('#piltvastus3').val();
+        if(tunnid === "" || isNaN(tunnid) || tunnid < 0 || tunnid > 24){
+          $('#viga3').show();
+          valid = false;
+        } else { $('#viga3').hide(); }
+
+        // 4. Radio
+        if($('input[name="raadioKuulamine"]:checked').length === 0){
+          $('#viga4').show();
+          valid = false;
+        } else { $('#viga4').hide(); }
+
+        // 5. Text (ainult tähed)
+        let tekst = $('#JaamadVastus').val().trim();
+        if(tekst === "" || !/^[a-zA-Z\s]+$/.test(tekst)){
+          $('#viga5').show();
+          valid = false;
+        } else { $('#viga5').hide(); }
+
+        // 6. Select
+        if($('#StiilVastus').val() === ""){
+          $('#viga6').show();
+          valid = false;
+        } else { $('#viga6').hide(); }
+
+      });
+    });
+  </script>
+
+
 </head>
 
 <body>
 
 <h1>Muusika küsimustik</h1>
 
-<form action="#">
+<form action="#" id="muusikaVorm">
   <table border="1">
 
     <tr>
@@ -43,6 +109,7 @@
       <td>
         <div id="VastusMuusikaKusimustik"></div>
         <img id="piltvastus1" src="Kusimus1Vastus.png" alt="Küsimus 1 vastuse pilt">
+        <span class="viga" id="viga1">Palun vali vähemalt üks muusik.</span>
       </td>
     </tr>
 
@@ -53,12 +120,14 @@
       </td>
 
       <td>
-        <textarea id="kooliTekst" oninput="KooliArvamus()"></textarea>
+        <textarea id="kooliTekst" name="kooliTekst" oninput="KooliArvamus()"></textarea>
+
       </td>
 
       <td>
         <div id="KooliVastus"></div>
         <img id="piltvastus2" src="Kusimus2Vastus.png" alt="Küsimus 2 vastuse pilt">
+        <span class="viga" id="viga2">Palun kirjuta enda arvamusest.</span>
       </td>
     </tr>
 
@@ -69,12 +138,13 @@
       </td>
 
       <td>
-        <input type="range" id="tunnid" min="0" max="24" step="1" value="0" oninput="TundideArv()">
+        <input type="range" id="tunnid" min="-1" max="26" step="1" value="" oninput="TundideArv()">
       </td>
 
       <td>
         <div id="TundideVastus"></div>
         <img id="piltvastus3" src="Kusimus3Vastus.png" alt="Küsimus 3 vastuse pilt">
+        <span class="viga" id="viga3"> palun täida väli 0 kuni 24. </span>
       </td>
     </tr>
 
@@ -96,6 +166,7 @@
       <td>
         <div id="RaadioVastus"></div>
         <img id="piltvastus4" src="Kusimus4JahVastus.png" alt="Küsimus 4 vastuse pilt">
+        <span class="viga" id="viga4"> Palun vali kas jah või ei.</span>
       </td>
     </tr>
 
@@ -112,6 +183,7 @@
       <td>
         <div id="JaamadVastus"></div>
         <img id="piltvastus5" src="Kusimus5Vastus.png" alt="Küsimus 5 vastuse pilt">
+        <span class="viga" id="viga5"> Nimeta vähemalt üks raadiojaam.</span>
       </td>
     </tr>
 
@@ -136,20 +208,23 @@
       <td>
         <div id="StiilVastus"></div>
         <img id="piltvastus6" src="Kusimus6Vastus.png" alt="Küsimus 6 vastuse pilt">
+        <span class="viga" name="StiilVastus" id="viga6">Palun vali vähemalt üks stiil.</span>
       </td>
     </tr>
 
     <tr>
       <td>
-        <input type="reset" value="Puhasta" onclick="Puhasta()">
+        <input type="reset" value="Puhasta" onclick="Puhasta()" id="puhasta">
       </td>
       <td>
         <input type="button" value="Saada" onclick="KuvaKokkuvote()">
+        <input type="submit" value="Andmete kontroll">
       </td>
       <td>
         <div id="KokkuvoteAla"></div>
       </td>
     </tr>
+
   </table>
 </form>
 

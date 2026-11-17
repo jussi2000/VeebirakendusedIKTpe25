@@ -32,17 +32,28 @@
             });
         });
 
+        //värvib teksti punaseks
+        function tekstPunaseks(){
+            $('#osa1').css('color', 'red');
+        }
+        function tekstMustaks(){
+            $('#osa1').css('color', 'black');
+        }
         function koordLugemine(event, ui){
             let koht=ui.offset;
-            $('#osa1').html('x: '+koht.left + ' || y: '+koht.top);
+            $('#kordinaadid').html('x: '+koht.left + ' || y: '+koht.top);
         }
 
         function leheStart(){
             $('#osa1').mouseenter(tekstPunaseks);
             $('#osa1').mouseleave(tekstMustaks);
             $('#osa1').draggable();
+            $('#osa1').bind('drag', koordLugemine); //kordinaatide lugemine
+            $('#pilt').draggable();
+            $('#pilt').bind('drag', koordLugemine);
 
         }
+
     </script>
 
 </head>
@@ -76,21 +87,30 @@
 </nav>
 <!--sisu-->
 <main>
-    <section id="osa1">
-        <h2>tere tulemast!</h2>
-        <p>See on veebirakenduste tunnis käsitsi kirjutatud leht!</p>
+    <section>
+        <div id="osa1">
+            <h2>tere tulemast!</h2>
+            See on veebirakenduste tunnis käsitsi kirjutatud leht!
         <br> <!--br = vahe-->
         <br>
-        <p>Palun kasuta navigeerimismenüü, et leida info!</p>
-    </section>
-
-    <section>
+        Palun kasuta navigeerimismenüü, et leida info!
+        </div>
+    <br>
         <input type="button" value="paremale" id="paremale">
 
         <input type="button" value="vasakule" id="vasakule">
 
+        <input type="button" value="peida tekst"
+               onclick="$('#osa1').hide(2000)">
+
+        <input type="button" value="kuva teksti"
+               onclick="$('#osa1').show(2000, alert('kohe kuvab teksti'))">
+
         </section>
 
+    <div id="kordinaadid"></div>
+    <img src="https://static.vecteezy.com/system/resources/previews/055/067/672/non_2x/blue-cat-is-isolated-on-transparent-background-free-png.png"
+         alt="" id="pilt">
 
     <section id = "osa2">
         <h2>päevapilt</h2>
