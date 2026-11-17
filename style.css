@@ -22,12 +22,13 @@ footer{
     border-top: 3px solid #93dfc7;
     border-radius: 60px 0 0 0;
 }
-#osa1{
-    position: relative;
-    left: 0px;
-    width: 200px;
-    border: solid 1px grey;
-    background-color: lightgray;
+section#osa1{
+    padding: 5%;
+    border: 1px solid #8c4040; /*kasuta nt: dotted, dashed, double, outline, groove*/
+    margin: 20px;/*kui ääres tekst kastiga asub*/
+    width: 25%;
+    /*kirjuta iga section(osa3, osa4, osa5) oma kujundusega mis kasutab erinevaid ääriseid värvi,
+     raam võiks olla ainult ühelt poolt*/
 }
 section#osa2{
     padding: 5%;
@@ -91,7 +92,13 @@ nav ul{
 nav ul li a:hover{
     background-color: #92dfc7;
 }
-
+#tekstikast{
+    position: relative;
+    left: 0px;
+    width: 200px;
+    border: solid 1px grey;
+    background-color: lightgray;
+}
 #h2{
     position: relative;
     left: 0px;

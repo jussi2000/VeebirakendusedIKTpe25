@@ -19,14 +19,13 @@
         $(document).ready(function () {
             //paremale nupu vajutamine
             $('#paremale').click(function () {
-                $('#osa1').animate({left: '200px'}, 1000);
+                $('#tekstikast').animate({left: '200px'}, 1000);
                 $(this).hide();
                 $('#vasakule').show();
             });
-
             //vasakule nupu vajutamine
             $('#vasakule').click(function () {
-                $('#osa1').animate({left: '0px'}, 1000);
+                $('#tekstikast').animate({left: '0px'}, 1000);
                 $(this).hide();
                 $('#paremale').show();
             });
@@ -34,10 +33,10 @@
 
         //värvib teksti punaseks
         function tekstPunaseks(){
-            $('#osa1').css('color', 'red');
+            $('#tekstikast').css('color', 'red');
         }
         function tekstMustaks(){
-            $('#osa1').css('color', 'black');
+            $('#tekstikast').css('color', 'black');
         }
         function koordLugemine(event, ui){
             let koht=ui.offset;
@@ -45,19 +44,19 @@
         }
 
         function leheStart(){
-            $('#osa1').mouseenter(tekstPunaseks);
-            $('#osa1').mouseleave(tekstMustaks);
-            $('#osa1').draggable();
-            $('#osa1').bind('drag', koordLugemine); //kordinaatide lugemine
-            $('#pilt').draggable();
-            $('#pilt').bind('drag', koordLugemine);
+            $('#tekstikast').mouseenter(tekstPunaseks);
+            $('#tekstikast').mouseleave(tekstMustaks);
+            $('#tekstikast').draggable();
+            $('#tekstikast').bind('drag', koordLugemine); //kordinaatide lugemine
+            $('#piltKass').draggable();
+            $('#piltKass').bind('drag', koordLugemine);
 
         }
 
     </script>
 
 </head>
-<body>
+<body onload="leheStart()">
 <!--veebiliehe sisu, mida näeb kasutaja-->
 <!-- päis -->
 <header>
@@ -87,30 +86,13 @@
 </nav>
 <!--sisu-->
 <main>
-    <section>
-        <div id="osa1">
-            <h2>tere tulemast!</h2>
-            See on veebirakenduste tunnis käsitsi kirjutatud leht!
+    <section id="osa1">
+        <h2>tere tulemast!</h2>
+        <p>See on veebirakenduste tunnis käsitsi kirjutatud leht!</p>
         <br> <!--br = vahe-->
         <br>
-        Palun kasuta navigeerimismenüü, et leida info!
-        </div>
-    <br>
-        <input type="button" value="paremale" id="paremale">
-
-        <input type="button" value="vasakule" id="vasakule">
-
-        <input type="button" value="peida tekst"
-               onclick="$('#osa1').hide(2000)">
-
-        <input type="button" value="kuva teksti"
-               onclick="$('#osa1').show(2000, alert('kohe kuvab teksti'))">
-
-        </section>
-
-    <div id="kordinaadid"></div>
-    <img src="https://static.vecteezy.com/system/resources/previews/055/067/672/non_2x/blue-cat-is-isolated-on-transparent-background-free-png.png"
-         alt="" id="pilt">
+        <p>Palun kasuta navigeerimismenüü, et leida info!</p>
+    </section>
 
     <section id = "osa2">
         <h2>päevapilt</h2>
@@ -125,10 +107,43 @@
         <div id="kuupaevaVastus2"></div>
     </section>
 
+    <!--jQuery-->
+
+    <section>
+        <h2>jQuery CDN</h2>
+        <div id="tekstikast">
+            jQuery - see on raamistik (teek)
+            <br>
+            CDN - raamistiku allalaadimisviisis välisserverist
+            <br>
+            Ametlik CDN asub https://releases.jquery.com
+        </div>
+        <br>
+
+        <input type="button" value="paremale" id="paremale">
+
+        <input type="button" value="vasakule" id="vasakule">
+
+        <input type="button" value="peida tekst"
+               onclick="$('#tekstikast').hide(2000)">
+
+        <input type="button" value="kuva teksti"
+               onclick="$('#tekstikast').show(2000, alert('kohe kuvab teksti'))">
+    </section>
+
+    <img src="https://static.vecteezy.com/system/resources/previews/055/067/672/non_2x/blue-cat-is-isolated-on-transparent-background-free-png.png"
+         alt="" id="pilt">
+
+    <br>
+    <div id="kordinaadid"></div>
+    <br>
 </main>
+</body>
+</html>
 <!--jalus-->
 <footer>
     <div>
         Johanna Leht
     </div>
+
 </footer>
