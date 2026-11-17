@@ -95,9 +95,12 @@ nav ul li a:hover{
 #tekstikast{
     position: relative;
     left: 0px;
-    width: 200px;
+    width: 30%;
     border: solid 1px grey;
     background-color: lightgray;
+    margin: 10px;
+    padding: 10px;
+
 }
 #h2{
     position: relative;
@@ -108,4 +111,5 @@ img#piltKass{
     width: 100px;
     position: relative;
     left: 0;
+    background-color: transparent;
 }

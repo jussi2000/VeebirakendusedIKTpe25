@@ -15,6 +15,10 @@
             integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI="
             crossorigin="anonymous"></script>
 
+    <script src="https://code.jquery.com/color/jquery.color-3.0.0.js"
+            integrity="sha256-nXuT4oV5wsIpHV/V7Ay53Vf/1rg2lqpiGWoP9CRk2tM="
+            crossorigin="anonymous"></script>
+
     <script>
         $(document).ready(function () {
             //paremale nupu vajutamine
@@ -31,9 +35,9 @@
             });
         });
 
-        //värvib teksti punaseks
+        //värvib teksti punaseks - muutsin värvi siniseks
         function tekstPunaseks(){
-            $('#tekstikast').css('color', 'red');
+            $('#tekstikast').css('color', '#074894');
         }
         function tekstMustaks(){
             $('#tekstikast').css('color', 'black');
@@ -41,6 +45,12 @@
         function koordLugemine(event, ui){
             let koht=ui.offset;
             $('#kordinaadid').html('x: '+koht.left + ' || y: '+koht.top);
+        }
+        // Muudab kassi pildi taustavärvi
+        function varviKass(){
+            $('#piltKass').animate({
+                backgroundColor: '#ffd000'
+            }, 1500);
         }
 
         function leheStart(){
@@ -50,6 +60,7 @@
             $('#tekstikast').bind('drag', koordLugemine); //kordinaatide lugemine
             $('#piltKass').draggable();
             $('#piltKass').bind('drag', koordLugemine);
+
 
         }
 
@@ -112,11 +123,23 @@
     <section>
         <h2>jQuery CDN</h2>
         <div id="tekstikast">
-            jQuery - see on raamistik (teek)
+
+            <h3><strong>Mida mingine funktsioon teeb</strong></h3>
+            'Paremale' nupp - liigutab tekstikasti paremale.
             <br>
-            CDN - raamistiku allalaadimisviisis välisserverist
+            'Vasakule' nupp - liigutab tekstikasti vasakule.
             <br>
-            Ametlik CDN asub https://releases.jquery.com
+            'Peida tekst' nupp - peidab tekstikasti.
+            <br>
+            'Kuva teksti' nupp - toob tekstikasti peidust tagasi.
+            <br>
+            Hiirega tekstikasti peale liikumine - muudab teksti siniseks.
+            <br>
+            Tekstikasti ja kassi pilti saab ka lohistada.
+            <br>
+            'Muuda kassi taustavärvi' nupp - muudab kassi taustavärvi kollaseks.
+            <br><br>
+            Liigutades tekstikasti või kassi pilti tuleb alla nende koordinaadid(x ja y)
         </div>
         <br>
 
@@ -137,6 +160,11 @@
 
     <img src="https://static.vecteezy.com/system/resources/previews/055/067/672/non_2x/blue-cat-is-isolated-on-transparent-background-free-png.png"
          alt="" id="piltKass">
+    <br>
+    <br>
+    <input type="button" value="Muuda kassi taustavärvi" onclick="varviKass()">
+    <br>
+    <br>
 
 </main>
 </body>
