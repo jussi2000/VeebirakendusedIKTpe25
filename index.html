@@ -85,7 +85,7 @@
             <a href="kontakt.html">Kontakt</a>
         </li>
         <li>
-            <a href="tehtud.html">Tehtud tööd</a>
+            <a href="tehtud.html" class="vihjemull" title="See on tehtud tööde navigatsioon">Tehtud tööd</a>
         </li>
         <li>
             <a href="lingid.html">Kasulikud lingid</a>
@@ -97,7 +97,7 @@
 </nav>
 <!--sisu-->
 <main>
-    <section id="osa1">
+    <section id="osa1" class="vihjemull" title="See on osa-1 section">
         <h2>tere tulemast!</h2>
         <p>See on veebirakenduste tunnis käsitsi kirjutatud leht!</p>
         <br> <!--br = vahe-->
@@ -121,7 +121,7 @@
     <!--jQuery-->
 
     <section>
-        <h2>jQuery CDN</h2>
+        <h2 class="vihjemull" title="See on pealkiri">jQuery CDN</h2>
         <div id="tekstikast">
 
             <h3><strong>Mida mingine funktsioon teeb</strong></h3>
@@ -143,15 +143,15 @@
         </div>
         <br>
 
-        <input type="button" value="paremale" id="paremale">
+        <input type="button" value="paremale" id="paremale" class="vihjemull" title="See liigutab pilti paremale">
 
-        <input type="button" value="vasakule" id="vasakule">
+        <input type="button" value="vasakule" id="vasakule" class="vihjemull" title="See liigutab pilti vasakule">
 
         <input type="button" value="peida tekst"
-               onclick="$('#tekstikast').hide(2000)">
+               onclick="$('#tekstikast').hide(2000)" class="vihjemull" title="See peidab tekstikasti">
 
         <input type="button" value="kuva teksti"
-               onclick="$('#tekstikast').show(2000, alert('kohe kuvab teksti'))">
+               onclick="$('#tekstikast').show(2000, alert('kohe kuvab teksti'))" class="vihjemull" title="See kuvab tekstikasti">
     </section>
 
     <br>
@@ -159,7 +159,7 @@
     <br>
 
     <img src="https://static.vecteezy.com/system/resources/previews/055/067/672/non_2x/blue-cat-is-isolated-on-transparent-background-free-png.png"
-         alt="" id="piltKass">
+         alt="" id="piltKass" class="vihjemull" title="See on sinine kass">
     <br>
     <br>
     <input type="button" value="Muuda kassi taustavärvi" onclick="varviKass()">

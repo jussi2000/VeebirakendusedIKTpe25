@@ -5,6 +5,26 @@
     <meta charset="UTF-8">
     <title>Johanna veebirakenduate aluste tööd</title>
     <link rel="stylesheet" href="style.css">
+
+    <script
+
+    src="https://code.jquery.com/jquery-3.7.1.min.js">
+
+        $(function(){
+
+            $('li ul').hide();
+
+            $('nav > ul > li:first-child > a').click(function(e){
+                e.preventDefault();
+
+                $(this).next('ul').slideToggle();
+            });
+
+        });
+    </script>
+
+
+
 </head>
 <body>
 <!--veebiliehe sisu, mida näeb kasutaja-->
@@ -20,12 +40,20 @@
         <li>
             <a href="index.html">Avaleht</a>
         </li>
+
         <li>
             <a href="kontakt.html">Kontakt</a>
         </li>
+
         <li>
-            <a href="tehtud.html">Tehtud tööd</a>
+            <ul id="menyy" >
+                <li><a href="tehtud.html">Tehtud tööd</a></li>
+                <li><a href="https://johannatima.eu/wp/">1. kursuse WP leht</a></li>
+                <li><a href="kujundus2/index.html">Leht teise kujundusega</a></li>
+                <li><a href="Tood/tabelid.html">Tabelid</a></li>
+            </ul>
         </li>
+
         <li>
             <a href="lingid.html">Kasulikud lingid</a>
         </li>
@@ -38,7 +66,7 @@
         <!--Lingid-->
         <h2>Tunnis tehtud tööd</h2>
         <div>
-            <a href="https://porfoolio.wordpress.com/log-in/">1. kursuse WP leht </a>
+            <a href="https://johannatima.eu/wp/">1. kursuse WP leht </a>
             <br>
             <a href="kujundus2/index.html">Leht teise kujundusega</a>
             <br>
@@ -63,6 +91,7 @@
             <a href="Tood/jQuery/index.html">jQuery</a>
         </div>
     </section>
+
     <section>
         <h2>Webstorm Github'iga sidumine</h2>
         git clone.... repo https link
