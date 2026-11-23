@@ -154,9 +154,10 @@ a#vihje {
 /* vihjemull */
 #vihje {
     position:absolute;
+    font-style: inherit;
     z-index:9999;
     color:#fff;
-    font-size:10px;
-    background-color:#000;
+    font-size:12px;
+    background-color: #04577a;
     padding:5px 25px;
 }
