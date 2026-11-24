@@ -65,7 +65,6 @@
         }
     </script>
 
-    <script src="js/jquery-1.4.2.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(function() {
             //selekteerime class="vihjemull"
@@ -75,7 +74,7 @@
                 //Eemaldame <title> atribuudi, et ei oleks topelt vihjemulli
                 $(this).attr('title','');
                 //Lisame elemendi sisse <div> elemendi koos muutuja 'mull' väärtusega
-                $(this).append('<div id="vihje">' + mull + '</div>');
+                $('body').append('<div id="vihje">' + mull + '</div>');
                 //Kuva efektiga vihjemull
                 $('#vihje').fadeIn('500');
                 $('#vihje').fadeTo('10',0.9);
@@ -89,7 +88,7 @@
                 //Lisame <title> sisu väärtuse tagasi
                 $(this).attr('title',$('#vihje').html());
                 //ja eemaldame <div> elemendi
-                $(this).children('div#vihje').remove();
+                $('#vihje').remove();
             });
         });
     </script>
